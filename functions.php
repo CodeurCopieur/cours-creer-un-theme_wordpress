@@ -14,5 +14,20 @@ function montheme_register_assets() {
   wp_enqueue_script( 'bootstrap' );
 }
 
+// les filtres permet d'altérer une valeur
+
+function montheme_title_separator() {
+  return '|';
+}
+
+function montheme_document_title_parts($title) {
+    //var_dump($title); die();
+    unset($title['tagline']); // filtre des éléments qu'on ne veux pas dans le titre
+    $title['demo'] = 'Intégrateur Front'; // ajout de propriété avec la cle demo
+    return $title;
+}
+
 add_action('after_setup_theme', 'montheme_supports');
 add_action('wp_enqueue_scripts', 'montheme_register_assets');
+add_filter('document_title_separator', 'montheme_title_separator');
+add_filter('document_title_parts', 'montheme_document_title_parts');
