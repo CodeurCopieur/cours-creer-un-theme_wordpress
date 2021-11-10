@@ -29,8 +29,15 @@
             <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
             <li class="nav-item"> <a class="nav-link" href="#">FAQ</a> </li>
           </ul> 
-        -->
-        <a class="btn navbar-btn ml-md-2 btn-light">Contact us</a>
+          <a class="btn navbar-btn ml-md-2 btn-light">Contact us</a>
+        
+        
+        <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-danger" type="submit">Search</button>
+      </form>-->
+      <!-- formulaire : searchform.php -->
+      <?= get_search_form() ?>
       </div>
     </div>
   </nav>
