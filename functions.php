@@ -65,8 +65,11 @@ function montheme_pagination() {
     $class="page-item";
     if($active) {
       $class .= ' active';
+      // concatenation de la variable $classe + active
     }
     echo '<li class="' . $class . '">';
+
+    // remplace page-numbers par page-link
     echo str_replace('page-numbers', 'page-link', $page);
     echo '</li>';
   }
